@@ -4,12 +4,25 @@ Welcome to the AutoGPT Documentation.
 
 The AutoGPT project consists of four main components:
 
-* The [Agent](#agent) &ndash; also known as just "AutoGPT"
-* The [Benchmark](#benchmark) &ndash; AKA `agbenchmark`
-* The [Forge](#forge)
-* The [Frontend](#frontend)
+- The [Server](#server) &ndash; known as the "AutoGPT Platform"
+- The [Agent](#agent) &ndash; also known as just "AutoGPT"
+- The [Benchmark](#benchmark) &ndash; AKA `agbenchmark`
+- The [Forge](#forge)
+- The [Frontend](#frontend)
 
 To tie these together, we also have a [CLI] at the root of the project.
+
+## 🌐 Server
+
+<!-- Setup, then Advanced, then New Blocks -->
+
+**[📖 Setup](server/setup.md)**
+&ensp;|&ensp;
+**[📖 Advanced Setup](server/advanced_setup.md)**
+&ensp;|&ensp;
+**[📖 Making New Blocks](server/new_blocks.md)**
+
+The server is the backbone of the New AutoGPT project. It provides the infrastructure for the agents to run, and the UI for you to interact with them. It integrates with the Forge, Agent, and a bespoke UI to provide a seamless experience.
 
 ---
 
@@ -88,7 +101,6 @@ Options:
 
 Commands:
   agent      Commands to create, start and stop agents
-  arena      Commands to enter the arena
   benchmark  Commands to start the benchmark and list tests and categories
   setup      Installs dependencies needed for your system.
 ```
@@ -96,7 +108,7 @@ Commands:
 Common commands:
 
 * `./run agent start autogpt` &ndash; [runs](./AutoGPT/usage.md#serve-agent-protocol-mode-with-ui) the AutoGPT agent
-* `./run agent create <name>` &ndash; creates a new Forge-based agent project at `autogpts/<name>`
+* `./run agent create <name>` &ndash; creates a new Forge-based agent project at `agents/<name>`
 * `./run benchmark start <agent>` &ndash; benchmarks the specified agent
 
 ---
